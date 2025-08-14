@@ -1,0 +1,14 @@
+@use '../helpers' as *;
+
+.btn{
+    padding: 10px 16px;
+    background-color: var(--color-accent);
+    border-radius: rem(4);
+    color: var(--color-light);
+    border-color: transparent;
+
+    &:hover{
+        background-color: var(--color-accent-opacity-60);
+        color: var(--color-light);
+    }
+}

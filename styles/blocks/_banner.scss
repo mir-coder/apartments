@@ -1,0 +1,78 @@
+@use '../helpers' as *;
+
+.banner{
+    height: rem(798);
+    background: var(--bgImg) center/cover no-repeat;
+    color: var(--color-light);
+    position: relative;
+
+    @include mobile{
+        height: 100%;
+        padding-block: rem(50);
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        color: var(--color-accent-opacity-20);
+    }
+
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        gap: rem(20);
+        position: relative;
+        z-index: 2;
+
+        @include mobile{
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__info{
+        max-width: rem(480);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
+
+        @include mobile{
+            text-align: center;
+        }
+    }
+
+    &__subtitle{
+        @include fluid-text (24, 18);
+        
+        font-weight: 500;
+    }
+
+    &__form{
+        max-width: rem(445);
+        width: 100%;
+        padding: rem(40);
+        color: var(--color-dark);
+        background-color: #fff;
+        border-radius: rem(16);
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
+        
+        &-text{
+            @include fluid-text (18, 16);
+
+            font-weight: 500;
+            line-height: 125%;
+        }
+
+        &-descr{
+            color: var(--color-black-opacity-40);
+            font-size: rem(15);
+            text-align: center;
+        }
+    }
+}

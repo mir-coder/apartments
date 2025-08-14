@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+
+.partners{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rem(30);
+
+    &__item{
+        max-width: rem(255);
+        width: 100%;
+        height: rem(160);
+        display: flex;
+        align-items: center;
+        padding: rem(20);
+        background-color: var(--color-light);
+        border-radius: rem(20);
+    }
+}

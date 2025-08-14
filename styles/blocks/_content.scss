@@ -1,0 +1,13 @@
+@use '../helpers' as *;
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+
+    &__subtitle{
+        font-size: rem(13);
+        color: var(--color-dark-opacity);
+        margin-top: rem(5);
+    }
+}

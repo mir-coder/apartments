@@ -1,0 +1,63 @@
+@use '../helpers' as *;
+
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+    animation-name: scrolling-header;
+    animation-fill-mode: both;
+    animation-timeline: scroll();
+    animation-range: rem(50) rem(80);
+
+    @keyframes scrolling-header {
+        to{
+            box-shadow: 0 0 1rem 0 var(--color-dark-opacity);
+            background-color: var(--color-light);
+        }
+    }
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: rem(30);
+    }
+
+    &__contacts{
+        display: flex;
+        align-items: center;
+        gap: rem(30);
+        
+        &-phone{
+           text-align: right;
+        }
+
+        &-items{
+            text-align: center;
+        }
+
+        &--overlay{
+            @include mobile{
+                position: fixed;
+                inset: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                row-gap: rem(55);
+                padding: rem(50) rem(20) rem(50);
+                color: var(--color-light);
+                background-color: var(--color-dark);
+                transition-duration: var(--transition-duration);
+                overflow-y: auto;
+
+                &:not(.is-active){
+                    @include hide;
+
+                    translate: 100%;
+                }
+            }
+        }
+    }
+}

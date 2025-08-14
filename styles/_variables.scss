@@ -1,0 +1,44 @@
+@use 'helpers' as *;
+
+:root{
+    --color-light: #ffffff;
+    --color-light-opacity-80: rgba(255, 255, 255, 0.8);
+
+    --color-black: #000000;
+    --color-black-opacity-80: rgba(0, 0, 0, 0.8);
+    --color-black-opacity-60: rgba(0, 0, 0, 0.6);
+    --color-black-opacity-40: rgba(0, 0, 0, 0.4);
+    --color-black-opacity-10: rgba(0, 0, 0, 0.1);
+
+
+    --color-dark: #011627;
+    --color-dark-opacity: rgba(1, 22, 39, 0.7);
+
+
+    --color-accent: #7209B7;
+    --color-accent-opacity-60: rgba(58, 12, 163, 0.6);
+    --color-accent-opacity-40: rgba(58, 12, 163, 0.4);
+    --color-accent-opacity-30: rgba(58, 12, 163, 0.3);
+    --color-accent-opacity-20: rgba(58, 12, 163, 0.2);
+
+    --color-red: #f74545;
+    --color-bg: #2EC4B6;
+
+    --font-family-accent: "Gilroy", sans-serif;
+    --font-family-base: "Stem", sans-serif;
+ 
+
+    --container-width: #{rem(1200)};
+    --container-width-fluid: #{rem(1360)};
+    --container-padding-x: #{rem(15)};
+
+    --border: #{rem(1) solid var(--color-black-opacity-10)};
+
+    --shadow: 0 0 #{rem(20)} 0 rgba(196, 196, 196, 0.25);
+    
+    --shadow-footer: 0px #{rem(6)} #{rem(8)} #{rem(-5)} rgba(36, 40, 41, 0.2);
+
+    --transition-duration: 0.2s;
+}
+
+

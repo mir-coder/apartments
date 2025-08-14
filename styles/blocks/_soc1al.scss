@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+
+.soc1al{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(10);
+
+    &__item{
+        width: rem(56);
+        height: rem(56);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        background-color: var(--color-accent);
+        transition: 0.2s;
+
+        &:hover{
+            background-color: var(--color-accent-opacity-60);
+        }
+    }
+}

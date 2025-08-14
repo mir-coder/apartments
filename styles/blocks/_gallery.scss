@@ -1,0 +1,52 @@
+@use '../helpers' as *;
+
+.gallery{
+    &__items{
+        display: grid;
+        gap: rem(30);
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas: 
+            'first second'
+            'first third';
+    }
+
+    &__item{
+        border-radius: rem(24);
+        overflow: hidden;
+        position: relative; 
+        transition: 0.2s;
+
+        &::before{
+            content: '';
+            position: absolute;
+            background-color: var(--color-accent-opacity-30);
+            width: 100%;
+            height: 100%;
+            inset: 0;
+            transition: 0.2s;
+            opacity: 0;
+        }
+
+        &:hover{
+            &::before{
+                opacity: 1;
+            }
+        }
+
+        &:nth-child(1){
+           grid-area: first;
+        }
+
+         &:nth-child(2){
+            grid-area: second;
+        }
+
+         &:nth-child(3){
+           grid-area: third;
+        }
+    }
+
+    &__image{
+        width: 100%;
+    }
+}

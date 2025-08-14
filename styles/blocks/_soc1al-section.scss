@@ -1,0 +1,22 @@
+@use '../helpers' as *;
+
+.soc1al-section{
+    background-color: var(--color-bg);
+    color: var(--color-light);
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: fluid(64, 30);
+    }
+
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap: rem(140);
+    }
+
+    .block-title__subtitle{
+        color: var(--color-light) !important;
+    }
+}

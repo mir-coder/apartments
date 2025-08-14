@@ -1,0 +1,15 @@
+@use '../helpers' as *;
+
+.field{
+    &__control{
+        height: rem(56);
+        width: 100%;
+        border: var(--border);
+        border-radius: rem(6);
+        padding: rem(16) rem(20);
+
+        &::placeholder{
+            color: var(--color-accent-opacity-30);
+        }
+    }
+}

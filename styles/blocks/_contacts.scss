@@ -1,0 +1,56 @@
+@use '../helpers' as *;
+
+.contacts{
+    position: relative;
+    background-color: var(--color-bg);
+    min-height: rem(400);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--shadow-footer);
+    padding: 0;
+    
+    
+    &__info{
+        width: 50%;
+        &-inner{
+            width: rem(500);
+            padding-inline: rem(30);
+            margin-right: 0;
+
+            @include tablet{
+                width: rem(380);
+            }
+
+            @include mobile{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        @include mobile{
+            width: 100%;
+            height: rem(300);
+        }
+    }
+
+    &__items{
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(10);
+        font-family: var(--font-family-accent);
+        color: var(--color-light);
+        font-weight: 500;
+        font-size: rem(16);
+    }
+
+    &__title{
+        font-family: var(--font-family-accent);
+        color: var(--color-light);
+        margin-bottom: rem(20);
+    }
+
+}
